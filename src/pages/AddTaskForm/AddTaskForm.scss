@@ -1,0 +1,12 @@
+.form { 
+    padding: 1rem;
+
+    &__title { 
+        display: block;
+    }
+
+    &__description {
+        resize: none;
+    }
+
+}
