@@ -2,28 +2,29 @@ import './AddTaskForm.scss';
 import Navigation from '../../components/Navigation/Navigation'; 
 import Header from '../../components/Header/Header';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
 function AddTaskForm(history) {
 
-    // const submitHandler = (e) => { 
-    //     e.preventDefault();
+    const submitHandler = (e) => { 
+        e.preventDefault();
 
-    // axios
-    // .post('/tasks', {
-    //     title: e.target.title.value,
-    //     description: e.target.description.value,
-    // })
-    //     .then(response => {
-    //         console.log(response);
-    //         alert('task added');
-    //         history.push(`/tasks/${response.data.id}`)
-    //     })
-    //     .catch(e => {
-    //         alert('failed to complete request')
-    //     })
-    // }
+    axios
+    .post('/tasks', {
+        title: e.target.title.value,
+        description: e.target.description.value,
+    })
+        .then(response => {
+            console.log(response);
+            alert('task added');
+            history.push(`/tasks/${response.data.id}`)
+        })
+        .catch(e => {
+            alert('failed to complete request')
+        })
+    }
 
     return (
       <section className ='form'>
@@ -51,7 +52,6 @@ function AddTaskForm(history) {
                 <Link to ='/' className='form__cancel'>Cancel</Link>
             </div>
         </form>
-
       </section>
     );
   }
