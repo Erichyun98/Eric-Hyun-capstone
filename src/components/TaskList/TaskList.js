@@ -36,15 +36,6 @@ class TaskList extends Component {
     }
 
     deleteTasks = (e, id) => { 
-        // let request = {
-        //     url: "http://localhost:8080/task/delete/" + id,
-        //     method: "delete"
-        // }
-        //     axios(request)
-        //     .then(response => { 
-        //         console.log("deleted a task successfully", response);
-        //         this.setState({
-        //             tasks: response.data
         axios.delete(`/task/delete/${id}`)
             .then(response => {
                 this.setState ({

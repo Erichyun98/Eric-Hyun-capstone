@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import React, { useState } from "react";
 import Navigation from '../../components/Navigation/Navigation';
 
-function AddTaskForm({tasks, history, handleDateSelect, startdate,events}) {
+function AddTaskForm({history,events}) {
 
     const submitHandler = (e) => { 
         e.preventDefault();
