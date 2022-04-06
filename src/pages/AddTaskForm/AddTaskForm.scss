@@ -1,4 +1,6 @@
 @use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
 
 .form { 
     padding: 1rem;
@@ -7,6 +9,16 @@
     border: 0.25rem solid #b8c8d8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
     background-color: #FFFFFF;
+
+    @include tablet { 
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    @include desktop { 
+        width: 45%;
+    }
 
     &__holder {
         margin-bottom: 0.5rem;

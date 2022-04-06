@@ -4,7 +4,7 @@ import parse from 'date-fns/parse'
 import startOfWeek from 'date-fns/startOfWeek'
 import getDay from 'date-fns/getDay'
 import enCA from 'date-fns/locale/en-CA'
-import 'react-big-calendar/lib/css/react-big-calendar.css'; 
+// import 'react-big-calendar/lib/sass/styles';
 import React, {useState} from 'react'; 
 import Datepicker from 'react-datepicker';
 // import Navigation from '../../components/Navigation/Navigation';
@@ -28,7 +28,7 @@ const tasks = {
     end: new Date(2022,6,0)
 }
 
-function CalendarPage() { 
+const CalendarPage = () => { 
     return (
         <>
             <section>
@@ -37,6 +37,7 @@ function CalendarPage() {
                 events={tasks}
                 starAccessor='start'
                 endAccessor='end'
+                style={{ height: 500 }}
                  />
             </section>
         {/* <Navigation /> */}

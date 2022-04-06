@@ -1,9 +1,21 @@
+@use '../../styles/partials/mixins' as *;
+
 .task { 
     border: 0.25rem solid #b8c8d8;
     border-radius: 6px;
     margin: 1rem 1rem 5rem 1rem; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
     background-color: #FFFFFF;
+
+    @include tablet { 
+        width: 60%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    @include desktop { 
+        width: 45%;
+    }
 
     &__title { 
         color:#323232;

@@ -17,14 +17,14 @@ function Navigation ({active}) {
                 <img src = {task} alt='task logo' className='nav__icon' />
                 <h3 className='nav__heading'>Tasks</h3>
             </Link>
-            <Link to= '/calendar' className={active === 'calendar' ? 'nav__link nav__link--active' : 'nav__link'}>
+            <Link to='/calendar' className={active === 'calendar' ? 'nav__link nav__link--active' : 'nav__link'}>
                 <img src = {calendar} alt='calendar logo' className='nav__icon' />
                 <h3 className='nav__heading'>Calender</h3>
             </Link>
-            <Link to= '/' className={active === '' ? 'nav__link nav__link--active' : 'nav__link'}>
+            {/* <Link to= '/' className={active === '' ? 'nav__link nav__link--active' : 'nav__link'}>
                 <img src = {message} alt='message logo' className='nav__icon' />    
                 <h3 className='nav__heading'>Messenger</h3>
-            </Link>
+            </Link> */}
         </nav>
     )
 }
