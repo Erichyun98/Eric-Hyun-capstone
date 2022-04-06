@@ -3,4 +3,22 @@
     margin: 1rem 1rem 0rem 1rem; 
     padding-bottom: 1rem;
 
+    // &__container { 
+    //     border: 0.25rem solid #d8b8b8; 
+    // }
+
+    &__button-container { 
+        text-align: right;
+    }
+
+    &__button { 
+        margin-right: 0.5rem;
+    }
+
+    &__img { 
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 4px;
+    }
+
 }

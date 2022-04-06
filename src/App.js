@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route path ='/' exact component = {TaskList} />
         <Route path ='/form' component = {AddTaskForm} />
-        {/* <Route path ='/task/:id' component = {TaskList} />  */}
+        <Route path ='/task/:id' component = {TaskList} /> 
       </Switch>
     </BrowserRouter>
   );
