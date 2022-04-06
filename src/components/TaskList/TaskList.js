@@ -5,6 +5,7 @@ import axios from 'axios';
 import add from '../../assets/icons/plus.png';
 import remove from '../../assets/icons/delete.png'; 
 import edit from '../../assets/icons/edit.png'; 
+import Navigation from '../Navigation/Navigation';
 
 class TaskList extends Component {
     state = { 
@@ -58,29 +59,36 @@ class TaskList extends Component {
     render () {
         const tasks = this.state.tasks
         return (
-            <section className ='task'>
-                {tasks.map((task => {
-                    return (
-                    <div className='task__container' key={task.id}>
-                        <h2 className ='task__title'>{task.tasktitle}</h2>
-                        <p className ='task__description'>Description: {task.description}</p>
-                        <p className ='task__date'>Start Date: {task.startdate}</p>
-                        <p className ='task__date'>End Date: {task.enddate}</p>
-                        <p className ='task__time'>DeadLine: {task.time}</p>
-                        <div className='task__button-container'>
-                            <button className='task__button'>
-                                <img className='task__img' src={edit} alt='edit Task' />
-                            </button>
-                            <button key={task.id} onClick={(e) => this.deleteTasks(e, task.id)} className='task__button task__delete-button'>
-                                <img className='task__img' src={remove} alt='Delete' />
-                            </button>
-                            <Link to = '/form' className='task__button task__add-button'>
-                                <img className='task__img' src={add} alt='Add' /> 
-                            </Link>
+            <>
+                <section className ='task'>
+                    {tasks.map((task => {
+                        return (
+                        <div className='task__container' key={task.id}>
+                            <h2 className ='task__title'>{task.tasktitle}</h2>
+                            <p className ='task__description'>Description: {task.description}</p>
+                            <div className='task__time-container'>
+                                <p className ='task__date'>Start Date: {task.startdate}</p>
+                                <div className='task__deadline'>
+                                    <p className ='task__date'>End Date: {task.enddate}</p>
+                                    <p className ='task__time'>DeadLine: {task.time}</p>
+                                </div>
+                            </div>
+                            <div className='task__button-container'>
+                                <button className='task__button'>
+                                    <img className='task__img' src={edit} alt='edit Task' />
+                                </button>
+                                <button key={task.id} onClick={(e) => this.deleteTasks(e, task.id)} className='task__button task__delete-button'>
+                                    <img className='task__img' src={remove} alt='Delete' />
+                                </button>
+                                <Link to = '/form' className='task__button task__add-button'>
+                                    <img className='task__img' src={add} alt='Add' /> 
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                )}))}
-            </section>
+                    )}))}
+                </section>
+                <Navigation active ='home'/>
+            </>
         )
     }    
 }

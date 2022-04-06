@@ -10,12 +10,12 @@ function App() {
   return (
     <BrowserRouter>
       <Header /> 
-      <Navigation /> 
       <Switch>
         <Route path ='/' exact component = {TaskList} />
         <Route path ='/form' component = {AddTaskForm} />
         <Route path ='/task/:id' component = {TaskList} /> 
       </Switch>
+      {/* <Navigation />  */}
     </BrowserRouter>
   );
 }

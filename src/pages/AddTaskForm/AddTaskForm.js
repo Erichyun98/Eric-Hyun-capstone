@@ -4,6 +4,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import React, { useState } from "react";
+import Navigation from '../../components/Navigation/Navigation';
 
 function AddTaskForm({tasks, history, handleDateSelect, startdate,events}) {
 
@@ -44,6 +45,7 @@ function AddTaskForm({tasks, history, handleDateSelect, startdate,events}) {
         setAllEvents([...allEvents, newEvent]);
     }
     return (
+    <>
       <section className ='form'>
         <h2 className='form__info'>New Task</h2>
         <h3 className='form__instruction'>Please fill out the form below to add a new task.</h3>
@@ -73,6 +75,8 @@ function AddTaskForm({tasks, history, handleDateSelect, startdate,events}) {
             </div>
         </form>
       </section>
+      <Navigation active='task'/>
+    </>
     );
   }
   

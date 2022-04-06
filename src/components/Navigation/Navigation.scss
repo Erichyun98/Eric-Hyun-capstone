@@ -10,6 +10,7 @@
     bottom: 0;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 35px 0 rgba(0, 0, 0, 0.19);
 
     &__logo { 
         height: 100%;
@@ -30,6 +31,11 @@
 
         &:hover { 
             background-color: rgba(232, 236, 241, 1);
+        }
+
+        &--active { 
+            text-decoration: underline;
+            text-decoration-color: #FFFFFF;
         }
     }
 

@@ -1,11 +1,36 @@
 .task { 
-    border: 0.25rem solid #323232;
-    margin: 1rem 1rem 0rem 1rem; 
-    padding-bottom: 1rem;
+    border: 0.25rem solid #b8c8d8;
+    border-radius: 6px;
+    margin: 1rem 1rem 5rem 1rem; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+    background-color: #FFFFFF;
 
-    // &__container { 
-    //     border: 0.25rem solid #d8b8b8; 
-    // }
+    &__title { 
+        color:#d8c8b8;
+    }
+
+    &__description { 
+        color:#d8c8b8;
+    }
+
+    &__date { 
+        color: #b8d8b8;
+    }
+
+    &__time { 
+        color: #b8d8b8;
+    }
+
+    &__container { 
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-bottom: 0.25rem solid #b8c8d8;
+    }
+    &__time-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
 
     &__button-container { 
         text-align: right;
